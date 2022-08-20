@@ -1,0 +1,187 @@
+<!-- Definição das principais tags do HTML5 -->
+
+<!--
+
+
+Header: serve para agrupar o cabeçalo de uma seção. Tudo que compõe um cabeçalho pode ser agrupado por ele: navegação,
+        títulos e subtítulos, ajudas introdutórias, sumário de seção, formulário de pesquisa, logotipo que fica no topo
+        do site, etc.
+        Podem existir vários headers dentro de uma página, e também dentro de outros elementos. Por exemplo: o header
+        principal que agrupa os elementos do topo do site, um header de uma section.
+
+
+Nav: serve para navegação. Ela é usada para os principais blocos de navegação do site, seja a condução dentro de seções
+     da própria página ou para navegação que nos leva a outras páginas. Quando colocamos a navegação do nosso site dentro
+     da tag <nav>, dizemos aos leitores de tela, para deficientes visuais, e robôs do Google que essa é uma navegação
+     importante do site.
+
+
+Section: representa uma seção comum de um documento. Serve para agrupar conteúdos do documento de acordo com o tema.
+         Mas cuidado, ele tem valor semântico. Então, se pretende usar um bloco de conteúdo genérico e/ou só para
+         estilização, use a tag 'div', que não possui valor semântico.
+
+Article: semelhante à Section, entretanto ele tem um significado mais específico para marcar um conteúdo do tipo artigo
+         em uma blog ou uma matéria de jornal. O Article indica que um determinado bloco contém informações importantes
+         e conteúdos importantes.
+
+
+ -> "Quando usar Section e Article?"
+O importante é ter em mente que section serve para separarmos as seções do documento. Usa-se a section para dividir o
+conteúdo em diferentes seções e ele pode conter ou até mesmo estar dentro de um article, de outras tags e até mesmo de
+outro section.
+Já a tag article serve para o conteúdo principal do seu site. Usa-se article para o conteúdo mais relevante do documento.
+É por conta desse conteúdo relevante da sua página que o leitor entra no site. E um article também pode ser aninhado dentro
+de uma section, dentro de outros elementos ou dentro de um outro article também.
+
+
+Aside: serve para conter conteúdos relacionados ao conteúdo principal, por exemplo: barras laterais, citações destacadas,
+       propagandas, links de navegação para redes sociais, enfim, qualquer conteúdo que possa ser entendido como à parte
+       do conteúdo principal de uma página. Basicamente um conteúdo que se você tirar da página não prejudicará o sentido
+       do conteúdo principal.
+
+
+Footer: o elemento footer é o rodapé (apesar de não precisar necessariamente estar no final da página ou de um artigo, mas
+        normalmente estão). Ele serve para agrupar conteúdos que normalmente colocamos no rodapé, como informações de direitos
+        autorais, dados de quem escreveu o conteúdo, links para documentos relacionados, etc. Assim como o header, podemos ter
+        mais de um footer numa mesma página e dentro de outros elementos.
+
+
+-->
+
+<!-- =================================//================================= -->
+<!-- O que é CSS? -->
+
+<!--
+
+CSS é uma linguagem de estilos que define o layout de documentos escritos com linguagem de marcação, no caso, o HTML.
+Ele adiciona um estilo a uma página e altera a forma visual de como ela é apresentada.
+
+CSS = "Cascading Style Sheets" ou "Folha de Estilos em Cascata"
+
+Com o CSS temos:
+ - controle do layout de vários documentos a partir de uma única folha de estilos;
+ - controle preciso do layout
+ - aplicação de diferentes layouts para diferentes mídias
+ - avançadas técnicas de desenvolvimento
+ - separa a estrutura do desing
+
+O CSS é responsável pelo visual do site. Através dele aplicamos as cores, determinamos os tamanhos, os pesos (no caso de fontes),
+bordas, imagens, etc. Com isso, separa-se a linguagem de marcação (HTML) da camada de apresentação (estética, design) do site.
+
+Em versões anteriores do HTML existiam elementos específicos para a apresentação do conteúdo. Essas antigas tags (que NÃO devem 
+ser utilidas) era usadas para adicionar certas características visuais ao documento. Usar elementos HTML para fins de apresentação
+é algo obsoleto e não deve ser feito. Sempre que a questão for de design, estética e apresentação, use o CSS.
+
+"O que é efeito cascata do CSS?"
+O CSS usa o efeito cascata.
+"Efeito cascata é o método pelo qual é aplicada uma regra CSS em função do peso (importância, prioridade) da regra CSS.
+Quando a um elemento aplica-se mais de uma regra CSS, diz-se que há um conflito de regras e será aplicada aquela que tiver
+maior peso (importância, prioridade) determinada pela ordem do efeito cascata." - Fonte: Maujor.
+
+A ordem do efeito cascata do CSS é: Herança, Especificidade e Importância.
+
+Herança: os elementos filhos herdam as declarações do elemento pai. Por padrão, ele já herda os estilos dos elementos pai,
+mas caso isso não ocorra e você queira forçar, é possível usar o valor "inherit" no CSS.
+
+Especificidade: quando você diz ao CSS qual elemento você quer que ele formate. Você faz isso através do seletor. o
+Seletor seria a identificação de um elemento HTML. 
+
+Importância: é uma exceção da regra. Usamos a declaração "!important" para aplicá-la. Essa declaração torna a especificidade
+do elemento que a contém maior do que qualquer declaração dentro do CSS.
+
+-->
+
+<!-- =================================//================================= -->
+<!-- Como funciona o CSS? -->
+
+<!-- 
+
+Sintaxe do CSS:
+
+O CSS tem sua própria sintaxe e estrutura. Uma regra CSS é composta por um seletor, uma propriedade e um valor.
+Logo, para criar uma declaração CSS, seguimos os seguintes passos:
+
+ - Apontamos o seletor
+ - abrimos e fechamos {}
+ - dentro das chaves determinamos a propriedade e o valor
+ - caso precise aplicar mais de uma declaração, utilizamos ponto e vírgula no fim da declaração
+
+seletor {
+
+        propriedade: valor;
+
+}
+
+Seletor: é o elemento HTML identificado por seu nome, classe, ID, etc; e para o qual a regra será aplicada
+Propriedade: é a característica que será estilizada, de um elemento HTML, no CSS
+Valor: é a aparência que será assumida pela propriedade CSS. Então, a propriedade define o que iremos estilizar,
+enquanto que o valor defino como ou o quanto será estilizado.
+
+Exemplo: quero determinar que o tamanho de um subtítulo do meu documento HTML será 14px. A propriedade para mudar
+o tamanho da fonte é 'font-size' e o valor da propriedade seria '14px'. Com isso, teríamos:
+
+h2 {
+        font-size: 14px;
+}
+
+Tipos de seletores:
+
+ - seletor de tipo: elementos do HTML de um mesmo tipo, como 'h2', 'p', 'body', etc.
+ É utilizado quando queremos estilizar todas as marcações de um elemento específico em todo um site.
+
+ - seletor de id: serve para selecionar um elemento HTML que tenha o atributo 'id' nomeado com o nome do seletor. Na
+ regra CSS o seletor id é identificado pelo símbolo '#' seguido pelo nome que você especificou.
+
+!!! Cada 'id' especificada é única e não deve existir repetição dentro de um mesmo documento HTML. Podemos ter vários ids
+num mesmo documento, mas não podemos repetir os nomes desses ids. O nome é único e só pode ser utilizado uma vez.
+
+ - seletor de classe: serve para selecionar um elemento HTML que tenha o atributo 'class' nomeada com o nome do
+ atributo seletor. Na regra CSS, o seletor class é identificado por um ponto seguido pelo nome que foi especificado
+ no atributo do elemento HTML. Assim, podemos aplicar a mesma regra para vários elementos HTML.
+
+EX.:
+[
+
+HTML:
+ <h2 class="um"> Este subtítulo possui 18px.</h2>
+ <p class="um"> Estou repetindo uma mesma classe.</p>
+
+CSS:
+ .um { font-size: 18px }
+
+]
+
+ - seletor pseudo-classe para links com mouse sobre eles: o "a.hover" é usado em hiperlinks para aplicar um estilo
+ quando o usuário passa o mouse sobre o elemento, como mudar a cor do texto do link. Encontramos esse efeito em
+ vários sites.
+
+ EX.:
+[
+
+HTML:
+ <a href="pagina-de-destino.html">Página de Destino.</a>
+
+CSS:
+ a { color: blue }
+ a:houver { color: red } 
+ /* ao colocar o mouse sobre o link, ele ficará vermelho; ao retirar o mouse, ele volta a ficar azul */
+ /* a pseudo-class 'hover' também pode ser utilizada com ids */
+
+]
+
+ - seletor universal: é representado pelo caractere '*' e se aplica a todos os elementos de uma página. Ele é
+ geralmente usado pra 'resetar' propriedades aplicadas automaticamente pelos navegadores. Cada navegador tem
+ seu jeito próprio de aplicar seus padrões de estilos. Ao resetar esses estilos através do seletor universal,
+ você "zera" qualquer estilo predefinido e tem a liberdade de definir as regras CSS sem a interferência dos
+ navegadores.
+
+ As propriedades 'padding' e 'margin' já vem predefinias em alguns navegadores e isso pode influenciar a aparência
+ de certos elementos HTML. Para impedir que isso aconteça, basta aplicar a sintaxe a seguir atribuindo o valor zero
+ para as duas propriedades:
+
+ * {
+    margin: 0;
+    padding: 0;
+ }
+
+-->

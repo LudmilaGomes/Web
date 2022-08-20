@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Projeto | IMC</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container"> <!-- bloco que contém todos os elementos utilizados -->
+
+            <h1>Calculadora | IMC</h1>  <!-- título -->
+
+            <hr> <!-- linha horizontal == horizontal line -->
+
+            <h2>Cálculo <span>Online</span> do IMC</h2> <!-- subtítulo -->
+            
+            <!-- breve descrição do que é o IMC -->
+            <p>O <span>índice de massa corporal</span> é uma medida internacional 
+            usada para calcular se uma pessoa está no peso ideal.</p>
+            
+            <!-- bloco para entrada do Nome da pessoa -->
+            <div class="input">
+                <label>Nome</label>
+                <input type="text" id="nome" title="insira seu nome" placeholder="exemplo: Ludmila" required>
+            </div>
+
+            <!-- bloco para entrada da Altura da pessoa -->
+            <div class="input">
+                <label>Altura</label>
+                <input type="number" id="altura" title="insira sua altura" placeholder="exemplo: 1.58 m" required>
+            </div>
+
+            <!-- bloco para entrada do Peso da pessoa -->
+            <div class="input">
+                <label>Peso</label>
+                <input type="number" id="peso" title="insira seu peso" placeholder="exemplo: 41 kg" required>
+            </div>
+
+            <!-- botão para calcular o IMC -->
+            <div>
+                <button id="calcular">CALCULAR</button>
+            </div>
+
+            <!--  -->
+            <div class="result" id="resultado">. . .</div>
+
+        </div>
+
+        <script src="./imc.js"></script> <!-- relaciona este documento .html com o arquivo .js correspondente -->
+    </body>
+</html>

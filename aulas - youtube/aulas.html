@@ -1,0 +1,199 @@
+<!-- AULAS 5, 6, 7, 8, 9 -->
+
+<!DOCTYPE html> <!-- informa ao navegador qual a versão, qual é o tipo do html estamos usando -->
+<html lang="pt-BR">
+    <head>
+        <!-- meta tags são tags de dados que são passados para o navegador, que irá interpretar essas informações -->
+        <meta charset="UTF-8"> <!-- formato de codificação (utilização de caracteres) -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documento 5</title>
+    </head>
+    <body>
+        <div> <!-- tag de bloco -->
+            <p>1 - Div, parágrafo e heading:</p>
+
+            <!-- tag de cabeçalho/título (de 'h1' até 'h6' em importância/tamanho) -->
+            <!-- normalmente, usamos tags <hN> até o 4: h1, h2, h3, h4 -->
+            <h1>Título 01</h1>
+            <h2>Título 02</h2>
+            <h3>Título 03</h3>
+            <h4>Título 04</h4>
+
+            <!-- tag para parágrafo -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magni deserunt nulla explicabo cupiditate impedit repellat ut ducimus,
+                nesciunt nihil ipsam recusandae porro et quo repellendus placeat excepturi quaerat?
+                Praesentium, aliquid?
+            </p>
+
+        </div>
+
+        <div>
+            <p>2 - Negrito, itálico e sublinhado:</p>
+
+            <!-- tag strong: em negrito; passa para o navegador que aquele trecho tem importância -->
+
+            <!-- tag em: em itálico ('em' de ênfase); para citações, trechos de palavras em outras línguas -->
+            <!-- passa para o navegador que aquele trecho tem importância -->
+
+            <!-- tag u: sublinhado; utilizada para identificar erros ortográficos -->
+            <!-- pouco utilizada -->
+
+            <!-- tag br: indicada para ser usada para quebra de linha em poemas e endereços; somente nesses casos -->
+            <!-- se o intuito é apenas quebrar linha, existem outras formas para fazê-lo. Então, seria mais adequado -->
+            <!-- utilizar o <p></p>, já que é um outro parágrafo. -->
+
+            <p>
+                Lorem ipsum dolor sit, amet <strong>consectetur</strong> adipisicing elit.
+                Itaque odit repudiandae <em>excepturi</em> nam?
+                Voluptates fuga, iusto <u>voluptatum</u> nesciunt obcaecati quos,
+                ea repudiandae quibusdam modi adipisci laborum nulla assumenda soluta neque?
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Quo nobis soluta cum incidunt! <br>
+                Culpa voluptates aliquid eum quaerat, ratione, inventore maiores quo vitae dicta non est praesentium, temporibus odio architecto? <br>
+            </p>
+
+        </div>
+
+        <div>
+            <p>3 - Usando a tag 'span':</p>
+
+            <!-- tag span: quando queremos alterar um trecho do conteúdo apenas por questão estética, usamos 'span' -->
+            <!-- utilizada quando queremos mudar o estilo de um trecho; usada com CSS -->
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                <span style="text-decoration: underline;">Qui voluptatibus consectetur nulla! Laborum cupiditate,</span>
+                tempore quidem laboriosam cumque porro, a minus suscipit architecto aliquid ex molestias.
+                Unde recusandae cupiditate eos!
+            </p>
+
+        </div>
+
+        <div>
+            <p>4 - Listas ordenadas e não ordenadas:</p>
+
+            <!-- temos listas ordenadas e desordenadas -->
+
+            <!-- tag ol: indica uma lista ordenada -->
+
+            <ol>
+                <li>Primeiro elemento</li>
+                <li>Segundo elemento</li>
+                <li>Terceiro elemento</li>
+                <li>Quarto elemento</li>
+            </ol>
+
+            <!-- tag ul: indica uma lista não ordenada -->
+
+            <ul>
+                <li>Primeiro elemento</li>
+                <li>Segundo elemento</li>
+                <li>Terceiro elemento</li>
+                <li>Quarto elemento</li>
+            </ul>
+
+            <!-- a tag <li> indica 'iten list', ou seja, é o item da lista -->
+
+        </div>
+
+        <div>
+            <p>5 - Tag de imagens:</p>
+
+            <!-- tag 'figure' é a tag pai de 'img' -->
+            <!-- tag img: inserimos em 'src' o caminho para a imagem, ou o link para a imagem; podemos adicionar o título com 'title' -->
+            <!-- ainda em 'img', usamos a tag 'alt' para indicar uma mensagem caso a foto não consiga ser aberta pelo navegador -->
+            <!-- também podemos especificar o tamanho e a largura da imagem (em px); se não especificado, a imagem aparece em seu -->
+            <!-- tamanho natural. -->
+
+            <!-- já a tag 'figcaption' serve para adicionar uma legenda para a imagem -->
+
+            <figure>
+                <img 
+                id="elis"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxynzMyEhR8j5M30jTtrtCisIwpdEC33kwww&usqp=CAU" 
+                title="Elis Regina" 
+                alt="Foto de Elis Regina"
+                width="500" 
+                height="500">
+
+                <figcaption>Elis</figcaption>
+            </figure>
+
+        </div>
+
+        <div>
+            <p>6 - Links:</p>
+
+            <!-- tag a: usamos essa tag para incluir em um trecho do nosso texto uma 'âncora' que leva o usuário para outra página-->
+            <!-- em 'href' inserimos o link da página; podemos inserir um título no link -->
+
+            <p>
+                Lorem ipsum dolor, sit amet <a href="" title="Clique aqui!!!">consectetur</a> adipisicing elit.
+                Reprehenderit, magni reiciendis voluptas velit ad sit magnam assumenda accusamus optio obcaecati, iste consequuntur ipsam praesentium! 
+                Sapiente assumenda culpa accusamus nesciunt quis.
+            </p>
+
+            <!-- também podemos incluir um link em uma imagem -->
+            <!-- a propriedade 'target="blank"' indica que o site indicado irá abrir em uma nova aba -->
+            
+            <fig>
+                <a href="" target="blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmcCu3NYT5qkJN4ggkGzKvQJmhaEkWVB2ofQ&usqp=CAU"
+                alt="imagem de mulher em um campo de flores"></a>
+                <figcaption>Legenda: mulher em um campo de flores</figcaption>
+            </fig>
+
+            <!-- também podemos utilizar links para indicar lugares dentro do próprio site, ou seja, um link interno -->
+            <!-- para navegar dentro do próprio documento, usamos um 'id'; o 'id' foi colocado na imagem de Elis e aqui -->
+            <!-- nós chamamos a 'id' na propriedade 'href'; para inserir uma 'id', usamos '#' e colocamo o nome da 'id' -->
+
+            <p><a href="#elis">Clique aqui para retornar à foto de Elis Regina.</a></p>
+
+        </div>
+
+    </body>
+</html>
+
+<!--
+
+TAGS
+
+1 - Div, parágrafo e heading:
+ - div: tag de bloco
+ - p: tag para parágrafo
+ - h1 a h6: tags para cabeçalhos (headings); são os títulos e subtítulos
+
+
+2 - Negrito, itálico e sublinhado:
+ - strong: negrito; informa ao navegador que um trecho do conteúdo é importante
+ - em: em itálico; informa ao navegador que um trecho do conteúdo é importante
+ - u: sublinhado; utilizada para identificar erros ortográficos
+
+
+3 - Usando a tag 'span':
+ - span: usamos quando queremos alterar um trecho do conteúdo apenas por questão estética; 
+         mudança no estilo de um trecho; apenas declaramos no arquivo .html o 'span', mas as
+         mudanças realmente são implementadas no arquivo .css  
+
+
+4 - Listas ordenadas e não ordenadas:
+ - ol: lista ordenada
+ - ul: lista não ordenada
+ - li: tag filha de 'ol' e 'ul' que indica cada item da lista ('li': list iten)
+
+
+5 - Tag de imagens:
+ - fig: tag pai das tags relacionadas a imagens
+ - img: tag para imagens; precisamos indicar o caminho/link da imagem; opcionais: 'title', 'alt', 'width', 'height'
+ - figcaption: legenda para a imagem
+
+
+6 - Links:
+ - a: âncora para outros sites; inserimos o link em 'href'; opcionais: 'title', 'rel', 'target';
+      podemos usar a tag 'a' para inserir um link de outro site, um caminho para uma página que está na
+      mesma pasta, ou para uma 'id' que irá levar a um outro ponto da mesma página
+
+-->
