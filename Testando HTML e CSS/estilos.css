@@ -1,0 +1,141 @@
+/* ESTILOS | CSS - 4 */
+
+/*
+
+Usar um arquivo externo para definir configurações de estilização é a melhor e mais organizada forma de se trabalhar 
+com HTML e CSS, pois deixa o arquivo .html mais limpo, além do fato de se poder reaproveitar o arquivo .css.
+
+Indicamos antes das chaves qual é a tag que queremos estilizar.
+
+*/
+
+/*podemos aplicar uma propriedade para todo o documento usando 'body'*/
+body {
+    font-style: normal;
+    font-family:'Times New Roman', Times, serif;
+    background-color: bisque;
+}
+/* p - parágrafo */
+p {
+    color:rgb(244, 90, 34);
+    background-color:rgb(255, 255, 255);
+}
+/* ul - lista desordenada */
+ul {
+    color:rgb(255, 164, 27);
+    background-color:rgb(255, 255, 255);
+}
+h1 {
+    border-bottom: 2px solid black;
+}
+
+a {
+    /* retirada a cor azul e o sublinhado do texto de link */
+    color: rgb(138, 37, 0);
+    text-decoration: none;
+}
+/*
+
+Algumas propriedades:
+
+-> font-style: *propriedade para definir o estilo da fonte: normal, em itálico, e oblíqua*
+
+-> font-family: *usamos essa instrução para definir a fonte do texto*
+
+Caso a fonte "Helvetica" não esteja disponível, o navegador verificará a disponibilidade da próxima
+fonte declarada, no nosso exemplo a "Lucida Grande". Caso o navegador não encontre também essa
+fonte, ele solicita qualquer fonte que pertença à família "sans-serif", declarada logo a seguir, e a utiliza
+para exibir o texto, não importa qual seja ela.
+
+-> text-align: *alinha o texto em center, right, left, ou justify*
+
+-> text-decoration: underline; - efeito de sublinhado no texto
+
+===========================//===========================
+
+Também é possível definir o espaçamento do texto com
+
+-> line-height:    *tamanho da altura de cada linha*
+-> letter-spacing: *tamanho do espaço entre cada letra*
+-> word-spacing:   *tamanho do espaço entre cada palavra*
+-> text-indent:    *tamanho da margem da primeira linha do texto*
+
+===========================//===========================
+
+Podemos inserir uma imagem de fundo com
+
+-> background-image: url(link);
+
+Caso se queira utilizar uma imagem salva, é necessário que esta imagem esteja na mesma pasta do arquivo .css.
+
+===========================//===========================
+
+Para definir as bordas ao redor do texto:
+
+-> border-color: cor da borda
+-> border-style: estilo da borda
+-> border-width: largura da linha
+
+Podemos também falar em qual dos lados do nosso elemento queremos a borda usando asubpropriedade que indica lado:
+
+-> border-top: tamanho estilo cor - borda em cima 
+-> border-right: tamanho estilo cor - borda à direita 
+-> border-bottom: tamanho estilo cor - borda embaixo 
+-> border-left: tamanho estilo cor - borda à esquerda 
+
+===========================//===========================
+
+A propriedade 'padding' é utilizada para definir o distanciamento interno entre o elemento e a borda em elementos e 
+tem as subpropriedades seguintes:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+Essas propriedades aplicam uma distância entre o limite do elemento e seu conteúdo acima, à direita,
+abaixo e à esquerda respectivamente.
+
+Se passado somente um valor para a propriedade padding , esse mesmo valor é aplicado em todas
+as direções.
+
+Se passados dois valores, o primeiro será aplicado acima e abaixo (equivalente a passar o mesmo
+valor para padding-top e padding-bottom ) e o segundo será aplicado à direita e à esquerda
+(equivalente ao mesmo valor para padding-right e padding-left ).
+
+Se passados três valores, o primeiro será aplicado acima (equivalente a padding-top ), o segundo
+será aplicado à direita e à esquerda (equivalente a passar o mesmo valor para padding-right e
+padding-left) e o terceiro valor será aplicado abaixo do elemento (equivalente a padding-bottom).
+
+Se passados quatro valores, serão aplicados respectivamente a padding-top , padding-right ,
+padding-bottom e padding-left . Para facilitar a memorização dessa ordem, basta lembrar que os
+valores são aplicados em sentido horário.
+
+h1 {
+    padding: 10px 25px 10px 15px;
+}
+
+===========================//===========================
+
+A propriedade 'margin' é bem parecida com a propriedade padding , exceto que ela adiciona
+espaço após o limite do elemento, ou seja, é um espaçamento além do elemento em si (espaçamento
+externo).
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+Há ainda uma maneira de permitir que o navegador defina qual será a dimensão da propriedade
+padding ou margin conforme o espaço disponível na tela: definimos o valor auto para os
+espaçamentos que quisermos.
+
+No exemplo abaixo, definimos que um elemento não tem nenhuma margem acima ou abaixo de seu
+conteúdo e que o navegador define uma margem igual para ambos os lados de acordo com o espaço
+disponível:
+
+p {
+    margin: 0 auto;
+}
+
+*/

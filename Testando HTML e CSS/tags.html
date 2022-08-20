@@ -1,0 +1,114 @@
+<!-- TAGS - 2 -->
+
+<!--
+
+Antes de começarmos a colocar o conteúdo, inserimos uma tag <html>. Dentro dessa
+tag, é necessário declarar outras duas tags: <head> e <body>. Essas duas tags são 
+"irmãs", pois estão no mesmo nível hierárquico em relação à sua tag "mãe", que é <html>.
+
+<html>
+    <head> </head>
+    <body> </body>
+<html>
+
+ -> TAG HEAD
+
+A tag <head> contém informações sobre o documento HTML que são de interesse apenas
+do navegador e outros serviços da web. São informações que não serão diretamente
+exibidas no navegador.
+
+É obrigatória a presença da tag de conteúdo <title> dentro da <head>, permitindo
+definir o título do documento, que pode ser visto na aba da janela do navegador.
+
+Outra configuração importante é a codificação/conjunto de caracteres, chamada de 
+encoding ou charset. Podemos configurar qual codificação queremos utilizar em
+nosso documento por meio da configuração de charset na tag <meta>. Um dos valores
+mais comuns usados hoje em dia é o UTF-8, também chamado de Unicode. O UTF-8 é a 
+recomendação atual para encoding na Web por ser amplamente suportada em navegadores
+e editores de código, além de ser compatível com praticamente todos os idiomas do
+mundo.
+
+<html>
+    <head> 
+        <meta charset = "utf-8">
+        <title>MusicDot</title>
+    </head>
+    <body>
+        ...
+    </body>
+<html>
+
+ -> TAG BODY
+
+Contém o corpo de um documento HTML, que é exibido pelo navegador em sua janela, ou
+seja, todo o conteúdo visível do site. É necessário que o <body> tenha ao menos um
+elemento filho, ou seja, uma ou mais tags HTML dentro dele.
+
+<html>
+    <head> 
+        <meta charset = "utf-8">
+        <title>MusicDot</title>
+    </head>
+    <body>
+        <h1>A MusicDot</h1>
+    </body>
+<html>
+
+ -> INSTRUÇÃO DOCTYPE
+
+O DOCTYPE não é uma tag HTML, mas uma instrução especial. Ela indica ao navegador qual
+versão do HTML deve ser utilizada para exibir a página. Quando não colocamos essa instrução
+a página é exibida numa espécie de "modo de compatibilidade".
+
+Utilizaremos <! DOCTYPE html> que indica para o navegador a utilização da versão mais recente
+do HTML.
+
+Essa declaração pode ser escrita em maiúsculo ou minúsculo, tanto faz, apenas será considerado
+e estará certo.
+
+-->
+
+<!-- Agora, vamos atualizar a página anterior -->
+
+<!DOCTYPE html>
+
+<html lang = "pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Minha página :) <!-- Título que aparece na aba do navegador -->
+        </title>
+        <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPIET3LU1IBIb4DJqMsQEcfME4_6iOWZzS5Q&usqp=CAU" rel="icon"> <!-- Ícone que aparece na aba do navegador -->
+        <!-- Com a tag <style> podemos alterar a cor do texto e a cor de fundo desse texto, mas o uso assim não é indicado -->
+        <style>
+            p {
+                color:rgb(215, 0, 0);
+                background-color:rgb(255, 255, 255);
+            }
+            ul {
+                color:rgb(255, 164, 27);
+                background-color:rgb(255, 255, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Minha Página</h1>
+        <h2>Bem-vindo à minha primeira página no navegador.</h2>
+        <ul>
+            <li>Confira o vazio desse site.</li>
+            <li>Olhe a foto da pizza.</li>
+            <li>Navegue pelo nada.</li>
+            <li>Olhe e olhe <strong>mais um pouco</strong>.</li>
+        </ul>
+        <p>
+            Aprecie tudo o que nós temos: a foto desta pizza.
+        </p>
+        <p>
+            Eu sei, é uma foto <em>muito</em> boa.
+        </p>
+        <figure>
+            <img src = "https://img.itdg.com.br/tdg/images/blog/uploads/2022/07/5-itens-necessarios-para-se-tornar-um-pizzaiolo-neste-Dia-da-Pizza.jpg?mode=crop&width={:width=%3E150,%20:height=%3E130}" alt = " Foto bonita">
+            <figcaption> <small><em>Belíssima foto.</em></small> </figcaption>
+        </figure>
+    </body>
+</html>
